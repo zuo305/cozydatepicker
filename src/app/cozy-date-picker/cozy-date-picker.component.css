@@ -1,0 +1,136 @@
+.mwt_border
+{
+	width:640px;
+	height:160px;
+	text-align: center;
+	background: #fff;
+	position: relative;
+	border: solid 0.2px #333;
+	margin:30px;
+	padding:5px;
+	box-shadow: 0px 3px 8px #888888;
+}
+
+.mwt_border .arrow_t_int{
+	width:  0px;
+	height: 0px;
+	border-width: 15px;
+	border-style: solid ;
+	border-color: transparent transparent #333 transparent;
+	position: absolute;
+	top:-30px;
+	left: 40px;
+}
+
+.mwt_border .arrow_t_out{
+	width:0px;
+	height: 0px;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+	position: absolute;
+	top: -29px;
+	left: 40px;
+}
+
+#prebutton{
+	display:inline-block;
+	position: absolute;
+	left: 10px;
+	z-index: 1;
+}
+
+#nextbutton{
+	display:inline-block;
+	position: absolute;
+	right: 10px;
+}
+
+.premonth{
+	display:inline-block;
+	width : 50%;
+	position: absolute;
+	left: 0px;
+}
+
+.nextmonth{
+	display:inline-block;
+	width : 50%;
+	position: absolute;
+	right: 0px;
+}
+
+.month{
+	margin:5px;
+	text-align: center;
+}
+
+
+
+
+.weekday{
+	display:inline-block;
+	width : 13%;
+	margin: 0.2%;
+	text-align: center;
+	background-color: gray;
+}
+
+
+.old-font{
+	color : gray;
+	text-decoration:line-through;
+}
+
+.old-font:hover{
+	background-color: gray;
+	color: white;
+}
+
+.normal-font:hover{
+	background-color: red;
+	color: white;
+}
+
+.weekend-font:hover{
+	background-color: red;
+	color: white;
+}
+
+.selected-font:hover{
+	background-color: red;
+	color: white;
+}
+
+.middle-font:hover{
+	background-color: red;
+	color: white;
+}
+
+
+.selected-font{
+	background-color: blue;
+	color: white;
+}
+
+.middle-font{
+	background-color: gray;
+	color: white;
+}
+
+.normal-font{
+	color: blue;
+	background-color: white;
+}
+
+.weekend-font{
+	color : #8A2BE2;
+	background-color: white;
+}
+
+.daylist{
+	display:inline-block;
+	width : 13%;
+	margin: 0.2%;
+	text-align: center;
+}

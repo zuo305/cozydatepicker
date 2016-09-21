@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+
+<h> {{title}}</h>
+<input type="text" [ngModel]="checkInDateString"  (keydown)="false" (focus)="checkInOpened = true; checkOutOpened = false" >
+<b2b-cozy-date-picker *ngIf="checkInOpened" [checkInDate]="checkInDate" [checkOutDate]="checkOutDate" [selectDateType]="0" (inputCheckInDate)="setCheckInDate($event)" (inputCheckOutDate)="setCheckOutDate($event)"> 
+</b2b-cozy-date-picker>
+<input type="text" [ngModel]="checkOutDateString" (keydown)="false" (focus)="checkOutOpened = true; checkInOpened = false" >
+<b2b-cozy-date-picker *ngIf="checkOutOpened" [selectDateType]="1" [checkInDate]="checkInDate" [checkOutDate]="checkOutDate" (inputCheckInDate)="setCheckInDate($event)" (inputCheckOutDate)="setCheckOutDate($event)"> 
+</b2b-cozy-date-picker>

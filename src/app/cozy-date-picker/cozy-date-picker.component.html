@@ -1,0 +1,58 @@
+
+<div class = "mwt_border"  >
+	<span class= "arrow_t_int"></span>
+	<span class= "arrow_t_out"></span>
+	<button (click)="pageButton(0)" id = "prebutton">Pre</button>
+	<div  class="premonth">
+		<div class="month">
+			{{firstMonth}}
+		</div>
+		<div *ngFor="let weekday of weekNameArray" class="weekday">
+			<a class="select-font" href="javascript:void(0)" >{{weekday }}</a>
+		</div>
+		<div *ngFor="let day of firstDayArray" class="daylist" (mouseover)='prepareSelectDay(day.date,day.state)' (mouseout)="outOfValid(day)">
+			<span *ngIf="day.state == dayState.normal">
+			<div (click)="selectDay(day.date)"  class="normal-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.old">
+			<div class="old-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.weekEnd">
+			<div (click)="selectDay(day.date)" class="weekend-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.selected">
+			<div (click)="selectDay(day.date)" class="selected-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.middle">
+			<div (click)="selectDay(day.date)" class="middle-font" >{{day.name }}</div>
+			</span>
+		</div>
+	</div>
+	<div class="nextmonth">
+		<div class="month">
+			{{secondMonth}}
+		</div>
+		<div *ngFor="let weekday of weekNameArray" class="weekday">
+			<a class="select-font" href="javascript:void(0)" >{{weekday }}</a>
+		</div>
+		<div *ngFor="let day of secondDayArray" class="daylist" (mouseover)='prepareSelectDay(day.date,day.state)' (mouseout)="outOfValid(day)">
+			<span *ngIf="day.state == dayState.normal">
+			<div (click)="selectDay(day.date)" class="normal-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.old">
+			<div class="old-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.weekEnd">
+			<div (click)="selectDay(day.date)" class="weekend-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.selected">
+			<div (click)="selectDay(day.date)" class="selected-font" >{{day.name }}</div>
+			</span>
+			<span *ngIf="day.state == dayState.middle">
+			<div (click)="selectDay(day.date)" class="middle-font" >{{day.name }}</div>
+			</span>
+		</div>
+	</div>
+	<button (click)="pageButton(1)" id = "nextbutton">Next</button>
+
+</div>
