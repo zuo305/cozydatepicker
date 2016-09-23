@@ -1,14 +1,16 @@
+
 .mwt_border
 {
 	width:640px;
-	height:160px;
+	color:#777777;
 	text-align: center;
 	background: #fff;
-	position: relative;
-	border: solid 0.2px #333;
+	position: absolute;
+	border: 1px solid #e5e5e5;
 	margin:30px;
 	padding:5px;
-	box-shadow: 0px 3px 8px #888888;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 1px;
+	
 }
 
 .mwt_border .arrow_t_int{
@@ -16,7 +18,7 @@
 	height: 0px;
 	border-width: 15px;
 	border-style: solid ;
-	border-color: transparent transparent #333 transparent;
+	border-color: transparent transparent #e5e5e5 transparent;
 	position: absolute;
 	top:-30px;
 	left: 40px;
@@ -36,28 +38,41 @@
 #prebutton{
 	display:inline-block;
 	position: absolute;
-	left: 10px;
+	left: 11px;
+	top:5px;
 	z-index: 1;
+	font-size: 12px;
+	padding: 8px 13px;
 }
 
 #nextbutton{
 	display:inline-block;
 	position: absolute;
-	right: 10px;
+	top:5px;
+	right: 11px;
+	font-size: 12px;
+	padding: 8px 13px;
 }
 
 .premonth{
-	display:inline-block;
+	float:left;
 	width : 50%;
-	position: absolute;
+	border-right:1px solid #ececec;
 	left: 0px;
-}
+	font-size: 14px;
 
+}
+.daylist span div{
+	padding: 7px;
+	cursor: pointer;
+}
 .nextmonth{
-	display:inline-block;
+	float:left;
 	width : 50%;
-	position: absolute;
+	border-left:1px solid #ececec;
 	right: 0px;
+	margin-left:-1px;
+	font-size: 14px;
 }
 
 .month{
@@ -71,66 +86,84 @@
 .weekday{
 	display:inline-block;
 	width : 13%;
-	margin: 0.2%;
+	border-bottom:2px solid #2FBBD4; 
 	text-align: center;
-	background-color: gray;
+	padding: 5px;
+	
+}
+.weekday a.select-font{
+	color:  #818a91;
+	text-decoration: none;
+	cursor: default;
 }
 
-
 .old-font{
-	color : gray;
+	color : #d5d5d5;
 	text-decoration:line-through;
 }
 
 .old-font:hover{
-	background-color: gray;
-	color: white;
+	background-color: #ececec;
+	
 }
 
-.normal-font:hover{
-	background-color: red;
-	color: white;
-}
 
-.weekend-font:hover{
-	background-color: red;
-	color: white;
-}
 
 .selected-font:hover{
-	background-color: red;
+	background-color: #2FBBD4;
 	color: white;
 }
-
+.weekend-font:hover,.normal-font:hover{
+	background-color: #2FBBD4;
+	color: white;
+}
 .middle-font:hover{
-	background-color: red;
-	color: white;
-}
+	background-color: #AAF7EC;
 
 
-.selected-font{
-	background-color: blue;
-	color: white;
 }
 
 .middle-font{
-	background-color: gray;
+	background-color: #E1FCF9;
+	color:#818a91;
+
+}
+.selected-font{
+	background-color: #2FBBD4;
 	color: white;
 }
 
+
+
 .normal-font{
-	color: blue;
+	color: #818a91;
 	background-color: white;
 }
 
 .weekend-font{
-	color : #8A2BE2;
+	color : #2FBBD4;
 	background-color: white;
 }
 
 .daylist{
 	display:inline-block;
 	width : 13%;
-	margin: 0.2%;
+
 	text-align: center;
+}
+
+#nextbutton, #prebutton{
+	background: none;
+	border: 0;
+	
+}
+
+#nextbutton:hover, #prebutton:hover{
+	background:#2FBBD4;
+	color: #fff;
+
+}
+
+#nextbutton:focus , #prebutton:focus {
+    outline: 0 none;
 }

@@ -1,11 +1,11 @@
 
-<div class = "mwt_border"  >
+<div class = "mwt_border clearfix">
 	<span class= "arrow_t_int"></span>
 	<span class= "arrow_t_out"></span>
-	<button (click)="pageButton(0)" id = "prebutton">Pre</button>
+	<button (click)="pageButton(0)" id = "prebutton"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
 	<div  class="premonth">
 		<div class="month">
-			{{firstMonth}}
+			<strong>{{firstMonth}}</strong>
 		</div>
 		<div *ngFor="let weekday of weekNameArray" class="weekday">
 			<a class="select-font" href="javascript:void(0)" >{{weekday }}</a>
@@ -30,7 +30,7 @@
 	</div>
 	<div class="nextmonth">
 		<div class="month">
-			{{secondMonth}}
+			<strong>{{secondMonth}}</strong>
 		</div>
 		<div *ngFor="let weekday of weekNameArray" class="weekday">
 			<a class="select-font" href="javascript:void(0)" >{{weekday }}</a>
@@ -53,6 +53,6 @@
 			</span>
 		</div>
 	</div>
-	<button (click)="pageButton(1)" id = "nextbutton">Next</button>
+	<button (click)="pageButton(1)" id = "nextbutton"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 
 </div>
