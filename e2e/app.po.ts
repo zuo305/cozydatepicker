@@ -1,4 +1,6 @@
-export class TempProjectPage {
+import { browser, element, by } from 'protractor/globals';
+
+export class NewdatepickerPage {
   navigateTo() {
     return browser.get('/');
   }

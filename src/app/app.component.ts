@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { CozyDatePickerComponent } from './cozy-date-picker/index';
 
 
 @Component({
-  moduleId: module.id,
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  directives: [CozyDatePickerComponent]
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {

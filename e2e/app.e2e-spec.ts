@@ -1,10 +1,10 @@
-import { TempProjectPage } from './app.po';
+import { NewdatepickerPage } from './app.po';
 
-describe('temp-project App', function() {
-  let page: TempProjectPage;
+describe('newdatepicker App', function() {
+  let page: NewdatepickerPage;
 
   beforeEach(() => {
-    page = new TempProjectPage();
+    page = new NewdatepickerPage();
   });
 
   it('should display message saying app works', () => {

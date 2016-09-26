@@ -1,5 +1,4 @@
-
-<h> {{title}}</h>
+<h1> {{title}}</h1>
 <input type="text" [ngModel]="checkInDateString"  (keydown)="false" (focus)="checkInOpened = true; checkOutOpened = false" >
 <b2b-cozy-date-picker *ngIf="checkInOpened" [checkInDate]="checkInDate" [checkOutDate]="checkOutDate" [selectDateType]="0" (inputCheckInDate)="setCheckInDate($event)" (inputCheckOutDate)="setCheckOutDate($event)"> 
 </b2b-cozy-date-picker>

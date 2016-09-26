@@ -18,7 +18,6 @@ interface dayStruct
 }
 
 @Component({
-  moduleId: module.id,
   selector: 'b2b-cozy-date-picker',
   templateUrl: 'cozy-date-picker.component.html',
   styleUrls: ['cozy-date-picker.component.css']
